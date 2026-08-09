@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useState, type ReactNode } from "react";
 
-export const APP_URL = "https://agrodev.lovable.app";
+export const APP_URL = "https://farm-connect-main-ochre.vercel.app/";
 // Public project presentation supplied by the AgroDev team.
 export const YOUTUBE_VIDEO_ID = "maDrQPge89g";
 
