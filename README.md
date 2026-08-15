@@ -1,94 +1,96 @@
-# AgroDev
+<div align="center">
 
-<p align="center">
-  <img src="public/agrodev-logo.png" alt="AgroDev logo" width="190" />
-</p>
+# 🌱 AgroDev
 
-<p align="center">
-  <strong>Data and trust for a climate-resilient food system.</strong><br />
-  A student project from Moldova for the Oxford Saïd Global Climate Tech Challenge 2026.
-</p>
+### Data and trust for a climate-resilient food system
 
-<p align="center">
-  <a href="https://agrodev.lovable.app">Explore the prototype</a>
-  &nbsp;·&nbsp;
-  <a href="https://www.youtube.com/watch?v=maDrQPge89g">Watch the project video</a>
-</p>
+A student climate-tech project from Moldova for the **Oxford Saïd Global Climate Tech Challenge 2026**.
+
+[Explore the prototype](https://agrodev.lovable.app) · [Watch the project video](https://www.youtube.com/watch?v=maDrQPge89g)
+
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![TanStack](https://img.shields.io/badge/TanStack-Start-FF4154)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-powered-646CFF?logo=vite&logoColor=white)
+
+</div>
 
 ---
 
-## The challenge
+## The idea
 
-Climate pressure exposes weak links throughout the food system. Farmers often have to make costly irrigation and technology decisions with incomplete, hard-to-interpret information. Consumers, meanwhile, have limited visibility into where food came from and how it was produced.
+Climate pressure makes already difficult agricultural decisions even harder. Farmers must choose when and how much to irrigate, evaluate new technology, and interpret field data — often without enough time, technical support, or trustworthy information.
 
-AgroDev responds to this gap with a practical, connected approach: turn field and weather data into understandable decisions, help farmers use technology well, and make food journeys more transparent.
+At the same time, consumers rarely have a clear view of where food came from and how it was produced.
 
-## Our focus: climate-smart irrigation
+**AgroDev connects these two sides of the food system.** The project starts with climate-smart irrigation and grows toward a broader platform for farm intelligence, practical learning, and food traceability.
 
-The contest prototype focuses on a measurable intervention in food security: **reducing avoidable water use without compromising plant growth**.
+## 💧 Climate-smart irrigation
 
-Instead of irrigating on a fixed timer, the approach combines soil conditions and weather information to recommend only the water a crop needs. The intended pilot compares a standard fixed-schedule irrigation setup with a sensor-informed setup under the same growing conditions.
+The competition prototype focuses on a concrete question:
 
-### How the prototype works
+> **Can sensor-informed irrigation reduce avoidable water use without compromising plant growth?**
 
-1. **Measure** - collect soil moisture and local environmental conditions.
-2. **Interpret** - combine readings with weather data and crop needs.
-3. **Recommend** - provide a clear next action for irrigation rather than raw data alone.
-4. **Verify** - compare water use and plant-growth indicators against a control setup.
+The proposed workflow is deliberately simple:
 
-This evidence-first design keeps the project honest: the prototype is designed to test a concrete hypothesis before claims of scale are made.
+1. **Measure** soil moisture and local environmental conditions.
+2. **Interpret** readings together with weather information and crop needs.
+3. **Recommend** a clear irrigation action instead of showing raw data alone.
+4. **Verify** the result against a fixed-schedule control setup.
 
-## The wider AgroDev platform
+The goal is not to make oversized claims before testing. The prototype is designed around a measurable hypothesis and a practical pilot.
 
-The website presents the long-term product vision in three connected layers:
+## 🧩 Product vision
 
-| Layer | Purpose |
-| --- | --- |
-| **Farm intelligence** | Transform field and weather data into practical guidance for irrigation, crop care, fertiliser and equipment use. |
-| **Practical learning** | Offer short, field-ready guides and evidence from pilot farms so farmers can understand and evaluate new technologies. |
-| **Food traceability** | Use QR-linked product information to make origin, producer, date and available inspection details easier to follow. |
+| Layer | What it does |
+|---|---|
+| 🌾 **Farm intelligence** | Turns field and weather data into understandable recommendations for irrigation, crop care, fertiliser, and equipment use. |
+| 🎓 **Practical learning** | Gives farmers concise, field-ready guidance and examples from pilot farms. |
+| 🔎 **Food traceability** | Connects products to QR-accessible information about origin, producer, dates, and available inspections. |
 
-These layers are a roadmap. The competition prototype is the irrigation-focused foundation of that roadmap.
+The irrigation prototype is the first validated building block of this wider vision.
 
-## Project website
+## ✨ Website highlights
 
-This repository contains the public AgroDev project website. It includes:
+This repository contains the public AgroDev project website:
 
-- an explanation of the challenge and the proposed solution;
-- an embedded project video;
-- a link to the interactive AgroDev prototype;
-- introductions to the four-person team;
-- a dedicated team-interviews page;
-- responsive navigation and layout for phones, tablets and desktops.
+- project story and problem framing;
+- climate-smart irrigation concept;
+- embedded project video;
+- link to the interactive prototype;
+- four-person team presentation;
+- dedicated interviews page;
+- responsive layout for mobile, tablet, and desktop.
 
-## Team
+## 👥 Team
 
-AgroDev is a four-student team from Moldova combining science, sustainability, design and technology.
+AgroDev is a four-student team from Moldova combining science, sustainability, communication, and technology.
 
-| Member | Contribution |
-| --- | --- |
-| **Valeria** | Biology and sustainability |
-| **Anna** | Research, communication and project development |
-| **Masha** | Biology, medicine and chemistry |
-| **Boris** | Robotics, IT and technical direction |
+| Member | Focus |
+|---|---|
+| **Valeria** | Biology & sustainability |
+| **Anna** | Research, communication & project development |
+| **Masha** | Biology, medicine & chemistry |
+| **Boris** | Robotics, IT & technical direction |
 
-## Technology
+## 🛠 Tech stack
 
-- React 19 + TypeScript
-- TanStack Start and TanStack Router
-- Vite
-- Tailwind CSS 4
-- Radix UI components
-- Vercel-ready Nitro server output
+- **React 19**
+- **TypeScript**
+- **TanStack Start**
+- **TanStack Router**
+- **Vite**
+- **Tailwind CSS 4**
+- **Radix UI**
+- **Nitro / Vercel output**
 
-## Run locally
+## 🚀 Run locally
 
-### Prerequisites
+### Requirements
 
-- Node.js 20 or newer
-- npm 10 or newer
-
-### Installation
+- Node.js 20+
+- npm 10+
 
 ```bash
 git clone https://github.com/xondell/agrodev-climate-champion.git
@@ -97,9 +99,9 @@ npm install
 npm run dev
 ```
 
-Open the local address printed by Vite, normally `http://localhost:3000`.
+Vite will print the local development URL in the terminal.
 
-### Production checks
+### Quality checks
 
 ```bash
 npm run lint
@@ -107,45 +109,45 @@ npm run build
 npm run preview
 ```
 
-## Project structure
+## 🗂 Project structure
 
 ```text
 src/
 ├── components/
-│   └── SiteLayout.tsx       # Shared header, mobile menu, footer and external links
+│   └── SiteLayout.tsx       # Shared header, mobile navigation, footer and links
 ├── routes/
 │   ├── index.tsx            # Main project story
 │   └── interview.tsx        # Team interviews
-├── styles.css               # Global visual system and responsive styles
+├── styles.css               # Global styles and responsive system
 └── server.ts                # Server entry point
 
 public/
-├── agrodev-logo.png         # AgroDev visual identity
-└── team/                    # Local team photography
+├── agrodev-logo.png         # Project identity
+└── team/                    # Team photography
 ```
 
-## Content updates
+## 🔧 Updating project links
 
-The two external links used across the website are deliberately centralised in [`src/components/SiteLayout.tsx`](src/components/SiteLayout.tsx):
+The main external links are centralised in `src/components/SiteLayout.tsx`:
 
-- `APP_URL` - the interactive AgroDev prototype;
-- `YOUTUBE_VIDEO_ID` - the public project video.
+- `APP_URL` — interactive AgroDev prototype;
+- `YOUTUBE_VIDEO_ID` — public project video.
 
-Update those values if the app or video moves. Team descriptions and project copy are located in [`src/routes/index.tsx`](src/routes/index.tsx); interview content is in [`src/routes/interview.tsx`](src/routes/interview.tsx).
+Project copy and team information live in `src/routes/index.tsx`, while interview content is kept in `src/routes/interview.tsx`.
 
-## Deploy to Vercel
+## ☁️ Deploy to Vercel
 
-1. Push this repository to GitHub.
-2. In [Vercel](https://vercel.com/new), choose **Add New → Project** and import `xondell/agrodev-climate-champion`.
-3. Keep Vercel's detected build settings. The repository already configures Nitro for the `vercel` preset.
-4. Select **Deploy**.
+1. Push the repository to GitHub.
+2. Import `xondell/agrodev-climate-champion` into Vercel.
+3. Keep the detected build settings.
+4. Deploy.
 
-Every subsequent push to `main` will create a new production deployment when the GitHub integration is enabled.
-
-## Project video
-
-[Watch AgroDev's project video on YouTube](https://www.youtube.com/watch?v=maDrQPge89g)
+The project already targets Vercel through Nitro.
 
 ---
 
-Built by **AgroDev, Moldova** for the **Oxford Saïd Global Climate Tech Challenge 2026**.
+<div align="center">
+
+**Built in Moldova for the Oxford Saïd Global Climate Tech Challenge 2026.**
+
+</div>
