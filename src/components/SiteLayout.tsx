@@ -1,10 +1,11 @@
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useState, type ReactNode } from "react";
+import { AiAssistant } from "@/components/AiAssistant";
 
 export const APP_URL = "https://farm-connect-main-ochre.vercel.app/";
-// Public project presentation supplied by the AgroDev team.
-export const YOUTUBE_VIDEO_ID = "maDrQPge89g";
+// Public project presentation supplied by the Made in Moldova team.
+export const YOUTUBE_VIDEO_ID = "9TSfNQh1RN4";
 
 const nav = [
   { to: "/", label: "Project" },
@@ -22,11 +23,11 @@ export function SiteLayout({ children }: { children: ReactNode }) {
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-5">
           <Link to="/" className="flex min-w-0 items-center gap-2.5" onClick={closeMenu}>
             <img
-              src="/agrodev-logo.png"
-              alt="AgroDev"
+              src="/agrohelp.png"
+              alt="AgroHelp"
               className="h-10 w-10 rounded-xl object-cover"
             />
-            <span className="font-display text-lg font-bold tracking-tight">AgroDev</span>
+            <span className="font-display text-lg font-bold tracking-tight">AgroHelp</span>
           </Link>
 
           <button
@@ -87,7 +88,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                 className="mt-1 rounded-lg bg-primary px-3 py-3 font-semibold text-primary-foreground"
                 onClick={closeMenu}
               >
-                Open the AgroDev app
+                Open AgroHelp
               </a>
             </div>
           </nav>
@@ -99,7 +100,8 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <footer className="border-t border-border/60 bg-secondary/50">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-4 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-5">
           <p>
-            AgroDev - a student team from Moldova for the Oxford Saïd Global Climate Tech Challenge.
+            Made in Moldova — the team behind AgroHelp for the Oxford Saïd Global Climate Tech
+            Challenge.
           </p>
           <a
             href={APP_URL}
@@ -111,6 +113,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           </a>
         </div>
       </footer>
+      <AiAssistant />
     </div>
   );
 }

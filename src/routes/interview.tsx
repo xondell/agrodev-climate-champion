@@ -3,14 +3,14 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/interview")({
   head: () => ({
     meta: [
-      { title: "Team interviews | AgroDev" },
+      { title: "Team interviews | Made in Moldova" },
       {
         name: "description",
         content:
-          "The AgroDev team shares why it is building a practical, climate-resilient food platform for Moldova.",
+          "The Made in Moldova team shares why it is building AgroHelp, a practical climate-resilient food platform.",
       },
-      { property: "og:title", content: "Team interviews | AgroDev" },
-      { property: "og:description", content: "Meet the students behind AgroDev." },
+      { property: "og:title", content: "Team interviews | Made in Moldova" },
+      { property: "og:description", content: "Meet the students behind AgroHelp." },
     ],
   }),
   component: InterviewPage,
@@ -47,7 +47,7 @@ const interviews = [
     name: "Masha",
     qa: [
       [
-        "What role does science play in AgroDev?",
+        "What role does science play in AgroHelp?",
         "Platform recommendations need a real basis in agronomy and soil chemistry. Otherwise, they are only attractive charts, not useful guidance.",
       ],
       [
@@ -77,7 +77,7 @@ function InterviewPage() {
       <section className="hero-surface">
         <div className="mx-auto w-full max-w-5xl px-4 py-16 sm:px-5 md:py-20">
           <p className="text-sm font-semibold uppercase tracking-[0.16em] opacity-75">
-            The people behind AgroDev
+            The people behind Made in Moldova
           </p>
           <h1 className="mt-3 text-4xl font-bold leading-tight md:text-5xl">Team interviews</h1>
           <p className="mt-4 max-w-2xl text-lg leading-7 opacity-90">

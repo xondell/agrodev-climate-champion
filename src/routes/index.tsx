@@ -5,13 +5,13 @@ import { APP_URL, YOUTUBE_VIDEO_ID } from "@/components/SiteLayout";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "AgroDev | Food security for a climate-resilient Moldova" },
+      { title: "AgroHelp | Food security for a climate-resilient Moldova" },
       {
         name: "description",
         content:
-          "AgroDev is a student team from Moldova building a connected platform for climate-smart farming, practical learning and transparent food traceability.",
+          "AgroHelp is a connected platform for climate-smart farming, practical learning and transparent food traceability, created by Made in Moldova.",
       },
-      { property: "og:title", content: "AgroDev | Oxford Saïd Global Climate Tech Challenge" },
+      { property: "og:title", content: "AgroHelp | Oxford Saïd Global Climate Tech Challenge" },
       {
         property: "og:description",
         content: "Data, guidance and traceability for a more resilient food system.",
@@ -38,7 +38,7 @@ const team = [
     name: "Masha",
     photo: "/team/image2.jpg",
     role: "Biology, medicine & chemistry",
-    bio: "She brings the scientific foundation to AgroDev, with a focus on biology, medicine and chemistry.",
+    bio: "She brings the scientific foundation to AgroHelp, with a focus on biology, medicine and chemistry.",
   },
   {
     name: "Boris",
@@ -99,7 +99,7 @@ function Index() {
               Data and trust for a climate-resilient food system.
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 opacity-90 sm:text-lg">
-              AgroDev connects field intelligence, technology education and food traceability -
+              AgroHelp connects field intelligence, technology education and food traceability -
               turning data into informed action and measurable impact.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -121,8 +121,8 @@ function Index() {
           </div>
           <div className="mx-auto w-full max-w-xs rounded-[2rem] border border-white/20 bg-white/10 p-5 shadow-2xl backdrop-blur-sm lg:max-w-sm">
             <img
-              src="/agrodev-logo.png"
-              alt="AgroDev logo"
+              src="/agrohelp.png"
+              alt="AgroHelp logo"
               className="mx-auto w-full rounded-2xl bg-white object-cover"
             />
           </div>
@@ -153,7 +153,7 @@ function Index() {
             One connected platform, three practical layers.
           </h2>
           <p className="mt-4 max-w-3xl leading-7 text-muted-foreground">
-            AgroDev supports earlier, better-informed decisions on the farm while making the journey
+            AgroHelp supports earlier, better-informed decisions on the farm while making the journey
             of food more visible to the people who buy it.
           </p>
           <div className="mt-8 grid gap-5 lg:grid-cols-3">
@@ -190,7 +190,7 @@ function Index() {
               <iframe
                 className="h-full w-full"
                 src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}`}
-                title="AgroDev project video"
+                title="AgroHelp project video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 loading="lazy"
@@ -211,7 +211,7 @@ function Index() {
       <section className="bg-secondary/40 py-16 md:py-20">
         <div className="mx-auto w-full max-w-6xl px-4 sm:px-5">
           <p className="text-sm font-semibold uppercase tracking-[0.16em] text-leaf">The team</p>
-          <h2 className="mt-3 text-3xl font-bold md:text-4xl">AgroDev, Moldova</h2>
+          <h2 className="mt-3 text-3xl font-bold md:text-4xl">Made in Moldova</h2>
           <p className="mt-3 text-muted-foreground">
             Four students combining science, sustainability and technology.
           </p>
@@ -220,7 +220,7 @@ function Index() {
               <article key={member.name} className="card-soft overflow-hidden">
                 <img
                   src={member.photo}
-                  alt={`${member.name}, AgroDev team member`}
+                  alt={`${member.name}, Made in Moldova team member`}
                   loading="lazy"
                   className="aspect-[4/5] w-full object-cover"
                 />
@@ -240,7 +240,7 @@ function Index() {
       <section className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-5 md:py-20">
         <div className="hero-surface flex flex-col items-start gap-6 rounded-3xl p-7 sm:p-10 md:flex-row md:items-center md:justify-between">
           <div>
-            <h2 className="text-2xl font-bold md:text-3xl">Explore our working prototype.</h2>
+            <h2 className="text-2xl font-bold md:text-3xl">Explore AgroHelp.</h2>
             <p className="mt-2 max-w-xl leading-7 opacity-90">
               See the starting point for field monitoring, data-guided recommendations and product
               traceability.
@@ -252,7 +252,7 @@ function Index() {
             rel="noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-semibold text-accent-foreground"
           >
-            Open the app <ArrowRight size={18} />
+            Open AgroHelp <ArrowRight size={18} />
           </a>
         </div>
       </section>

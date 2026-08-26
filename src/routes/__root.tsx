@@ -78,13 +78,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "AgroDev — Oxford Saïd Global Climate Tech Challenge" },
+      { title: "AgroHelp — Oxford Saïd Global Climate Tech Challenge" },
       {
         name: "description",
         content:
-          "AgroDev is a student team from Moldova building a platform for climate-resilient food security.",
+          "AgroHelp is a climate-resilient food platform created by the Made in Moldova team.",
       },
-      { name: "author", content: "AgroDev" },
+      { name: "author", content: "Made in Moldova" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
