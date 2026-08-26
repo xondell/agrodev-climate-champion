@@ -5,7 +5,7 @@ import { AiAssistant } from "@/components/AiAssistant";
 
 export const APP_URL = "https://farm-connect-main-ochre.vercel.app/";
 // Public project presentation supplied by the Made in Moldova team.
-export const YOUTUBE_VIDEO_ID = "maDrQPge89g";
+export const YOUTUBE_VIDEO_ID = "9TSfNQh1RN4";
 
 const nav = [
   { to: "/", label: "Project" },
