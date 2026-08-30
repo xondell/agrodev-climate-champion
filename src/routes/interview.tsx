@@ -170,10 +170,10 @@ function InterviewVideo({
   );
 
   return (
-    <div className="relative bg-ink">
+    <div className="relative aspect-video w-full overflow-hidden bg-ink">
       <video
         ref={videoRef}
-        className="aspect-video h-full w-full object-contain"
+        className="h-full w-full object-contain"
         controls
         preload="metadata"
         aria-label={`Interview with ${name}`}
@@ -235,7 +235,7 @@ function InterviewPage() {
             >
               <article className="card-soft overflow-hidden">
                 <div className="grid lg:grid-cols-[minmax(0,1.35fr)_minmax(18rem,0.65fr)]">
-                  <div className="bg-ink">
+                  <div className="self-start">
                     <InterviewVideo
                       video={interview.video}
                       name={interview.name}
