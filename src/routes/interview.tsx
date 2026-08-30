@@ -1,3 +1,4 @@
+import { useRef, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -30,10 +31,169 @@ const interviews = [
       "Food Safety, Quality and Sustainability Manager",
     ],
     video: "/interviews/andrei-cumpanici.mp4",
+    captions: undefined,
     summary:
       "Andrei Cumpanici explains that food safety begins in the field: farmers need to use approved fertilizers and plant-protection products correctly, follow production practices and observe the required waiting periods before harvest. He highlights residue analysis as an essential check for meeting Moldovan and export-market standards. He also sees practical training as vital: online learning can help people build on existing knowledge, but should complement direct instruction from specialists. A reliable platform can bring together current technology updates and high-quality video lessons, helping farmers and processors apply research-based guidance with confidence.",
   },
+  {
+    id: "vineyard-winemaking",
+    tab: "Vineyard & winemaking",
+    name: "Independent wine producer",
+    roles: ["Small vineyard owner", "Wine producer"],
+    video: "/interviews/wine-producer.mp4",
+    summary:
+      "A small-scale wine producer describes how rising heat, drought and disease pressure threaten grape quality and vineyard yields. Excessive heat can raise sugars before phenolic ripeness and acidity develop, while water stress slows growth and may prevent grapes from ripening before autumn. Heavy rain followed by heat keeps leaves wet and encourages disease. Although monitoring tools for leaf wetness and humidity could speed up protection decisions, their cost makes them harder for small producers to adopt. The interview highlights the value of practical, affordable climate-smart tools for vineyards of every size.",
+    captions: [
+      {
+        start: 0,
+        end: 8.5,
+        text: "Tell us a little about yourself and what you do.",
+      },
+      {
+        start: 8.5,
+        end: 17,
+        text: "My whole life revolves around wine, vineyards and winemaking.",
+      },
+      {
+        start: 17,
+        end: 27,
+        text: "Today, my brother and I run our own small wine production.",
+      },
+      {
+        start: 27,
+        end: 39,
+        text: "We both worked as sommeliers for many years, and my brother is a trained winemaking technologist.",
+      },
+      {
+        start: 39,
+        end: 51,
+        text: "We have been producing our own wine for six years and also have our own small vineyards.",
+      },
+      {
+        start: 51,
+        end: 68,
+        text: "What are the main difficulties you face in the vineyard: weather, drought, vine diseases, and the technologies you use to care for it?",
+      },
+      {
+        start: 68,
+        end: 80,
+        text: "All of these are important challenges, beginning with excessive heat.",
+      },
+      {
+        start: 80,
+        end: 93,
+        text: "In the heat, grapes accumulate sugar very quickly, but phenolic ripeness does not develop.",
+      },
+      {
+        start: 93,
+        end: 106,
+        text: "When the seeds remain green, the wine can show unripe, astringent notes.",
+      },
+      {
+        start: 106,
+        end: 119,
+        text: "Wine needs acidity to feel alive and fresh; acidity also helps it keep longer.",
+      },
+      { start: 119, end: 131, text: "Excessive heat destroys this balance." },
+      {
+        start: 131,
+        end: 145,
+        text: "The second problem is the lack of rain and limited access to water.",
+      },
+      {
+        start: 145,
+        end: 161,
+        text: "For large vineyards, water stress can block growth and delay grape ripening.",
+      },
+      {
+        start: 161,
+        end: 174,
+        text: "If autumn cold arrives before the grapes build enough sugar, there will be no good wine.",
+      },
+      {
+        start: 174,
+        end: 189,
+        text: "Heavy rain followed by heat keeps leaves wet — ideal conditions for disease.",
+      },
+      {
+        start: 189,
+        end: 206,
+        text: "Have you or your colleagues faced challenges when implementing modern technologies, such as monitoring sensors, weather analysis or forecasting systems?",
+      },
+      {
+        start: 206,
+        end: 219,
+        text: "I have not faced this personally because our vineyards are small and the risks are lower.",
+      },
+      {
+        start: 219,
+        end: 231,
+        text: "These tools would certainly make our work easier, but they require major investment.",
+      },
+      {
+        start: 231,
+        end: 246,
+        text: "Small producers need to use their funds carefully, while large companies cannot afford major losses.",
+      },
+      {
+        start: 246,
+        end: 260,
+        text: "It is valuable to know how long a leaf stays wet and what the humidity is.",
+      },
+      {
+        start: 260,
+        end: 274,
+        text: "That information helps growers decide faster when to spray and protect the vineyard.",
+      },
+      {
+        start: 274,
+        end: 314.6,
+        text: "These technologies are very helpful when there are sufficient funds to invest in them.",
+      },
+    ],
+  },
 ];
+
+function InterviewVideo({
+  video,
+  name,
+  captions,
+}: {
+  video: string;
+  name: string;
+  captions?: { start: number; end: number; text: string }[];
+}) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [currentTime, setCurrentTime] = useState(0);
+  const activeCaption = captions?.find(
+    (caption) => currentTime >= caption.start && currentTime < caption.end,
+  );
+
+  return (
+    <div className="relative bg-ink">
+      <video
+        ref={videoRef}
+        className="aspect-video h-full w-full object-contain"
+        controls
+        preload="metadata"
+        aria-label={`Interview with ${name}`}
+        onTimeUpdate={() => setCurrentTime(videoRef.current?.currentTime ?? 0)}
+        onSeeked={() => setCurrentTime(videoRef.current?.currentTime ?? 0)}
+      >
+        <source src={video} type="video/mp4" />
+        Your browser does not support embedded video.
+      </video>
+      {activeCaption && (
+        <p
+          aria-live="polite"
+          className="pointer-events-none absolute inset-x-4 bottom-14 mx-auto max-w-[90%] rounded bg-black/80 px-4 py-2 text-center text-sm font-semibold leading-5 text-white shadow-lg sm:text-base"
+        >
+          {activeCaption.text}
+        </p>
+      )}
+    </div>
+  );
+}
 
 function InterviewPage() {
   return (
@@ -76,15 +236,11 @@ function InterviewPage() {
               <article className="card-soft overflow-hidden">
                 <div className="grid lg:grid-cols-[minmax(0,1.35fr)_minmax(18rem,0.65fr)]">
                   <div className="bg-ink">
-                    <video
-                      className="aspect-video h-full w-full object-contain"
-                      controls
-                      preload="metadata"
-                      aria-label={`Interview with ${interview.name}`}
-                    >
-                      <source src={interview.video} type="video/mp4" />
-                      Your browser does not support embedded video.
-                    </video>
+                    <InterviewVideo
+                      video={interview.video}
+                      name={interview.name}
+                      captions={interview.captions}
+                    />
                   </div>
 
                   <div className="p-6 sm:p-8">
