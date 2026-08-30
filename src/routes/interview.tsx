@@ -1,16 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export const Route = createFileRoute("/interview")({
   head: () => ({
     meta: [
-      { title: "Team interviews | AgroDev" },
+      { title: "Interviews | AgroDev" },
       {
         name: "description",
         content:
-          "The AgroDev team shares why it is building a practical, climate-resilient food platform for Moldova.",
+          "Conversations with food safety, quality and sustainability experts supporting Moldova's agriculture.",
       },
-      { property: "og:title", content: "Team interviews | AgroDev" },
-      { property: "og:description", content: "Meet the students behind AgroDev." },
+      { property: "og:title", content: "Interviews | AgroDev" },
+      {
+        property: "og:description",
+        content: "Watch expert conversations from the AgroDev community.",
+      },
     ],
   }),
   component: InterviewPage,
@@ -18,56 +22,16 @@ export const Route = createFileRoute("/interview")({
 
 const interviews = [
   {
-    name: "Valeria",
-    qa: [
-      [
-        "Why food security?",
-        "It is where biology, climate and economics meet. When a harvest is lost because of a poor decision, the effects travel through the whole chain - from the farm to families at the table.",
-      ],
-      [
-        "What does resilience mean to you?",
-        "It means a farm can get through a difficult year without devastating losses. Data and forecasts create that capacity before a crisis, not after it.",
-      ],
+    id: "andrei-cumpanici",
+    tab: "Andrei Cumpanici",
+    name: "Andrei Cumpanici",
+    roles: [
+      "Doctor Universitar, UTM",
+      "Food Safety, Quality and Sustainability Manager",
     ],
-  },
-  {
-    name: "Anna",
-    qa: [
-      [
-        "How does the team work together?",
-        "We divided the project into farm, consumer and pilot-farm areas. Each person leads a part, but we discuss the key decisions together.",
-      ],
-      [
-        "What has been the hardest part?",
-        "Turning a scientific concept into something an everyday farmer can understand. Designing a clear interface was just as important as the technology itself.",
-      ],
-    ],
-  },
-  {
-    name: "Masha",
-    qa: [
-      [
-        "What role does science play in AgroDev?",
-        "Platform recommendations need a real basis in agronomy and soil chemistry. Otherwise, they are only attractive charts, not useful guidance.",
-      ],
-      [
-        "Why pilot farms?",
-        "They allow us to test technology in real conditions and publish honest results - not marketing claims from manufacturers.",
-      ],
-    ],
-  },
-  {
-    name: "Boris",
-    qa: [
-      [
-        "How does the technical layer work?",
-        "Field sensors collect conditions. The model compares them with weather data, then turns the results into a forecast and a specific next action.",
-      ],
-      [
-        "What does a QR code add?",
-        "It can show a product's story: origin, producer, date and available checks. That makes responsibility across the supply chain easier to trace.",
-      ],
-    ],
+    video: "/interviews/andrei-cumpanici.mp4",
+    summary:
+      "Andrei Cumpanici explains that food safety begins in the field: farmers need to use approved fertilizers and plant-protection products correctly, follow production practices and observe the required waiting periods before harvest. He highlights residue analysis as an essential check for meeting Moldovan and export-market standards. He also sees practical training as vital: online learning can help people build on existing knowledge, but should complement direct instruction from specialists. A reliable platform can bring together current technology updates and high-quality video lessons, helping farmers and processors apply research-based guidance with confidence.",
   },
 ];
 
@@ -79,30 +43,77 @@ function InterviewPage() {
           <p className="text-sm font-semibold uppercase tracking-[0.16em] opacity-75">
             The people behind AgroDev
           </p>
-          <h1 className="mt-3 text-4xl font-bold leading-tight md:text-5xl">Team interviews</h1>
+          <h1 className="mt-3 text-4xl font-bold leading-tight md:text-5xl">
+            Interviews
+          </h1>
           <p className="mt-4 max-w-2xl text-lg leading-7 opacity-90">
-            Four students discuss their project, climate risks and the role technology can play in
-            Moldova's agriculture.
+            Hear from the experts whose knowledge helps make agriculture safer,
+            more sustainable and better prepared for the future.
           </p>
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-4xl px-4 py-16 sm:px-5 md:py-20">
-        <div className="space-y-6">
-          {interviews.map((person) => (
-            <article key={person.name} className="card-soft p-6 sm:p-8">
-              <h2 className="font-display text-2xl font-bold">{person.name}</h2>
-              <div className="mt-5 space-y-6">
-                {person.qa.map(([question, answer]) => (
-                  <div key={question}>
-                    <h3 className="font-semibold text-primary">{question}</h3>
-                    <p className="mt-2 leading-7 text-muted-foreground">{answer}</p>
+      <section className="mx-auto w-full max-w-5xl px-4 py-16 sm:px-5 md:py-20">
+        <Tabs defaultValue={interviews[0].id} className="w-full">
+          <TabsList className="h-auto max-w-full justify-start gap-1 overflow-x-auto">
+            {interviews.map((interview) => (
+              <TabsTrigger
+                key={interview.id}
+                value={interview.id}
+                className="px-4 py-2"
+              >
+                {interview.tab}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+
+          {interviews.map((interview) => (
+            <TabsContent
+              key={interview.id}
+              value={interview.id}
+              className="mt-6"
+            >
+              <article className="card-soft overflow-hidden">
+                <div className="grid lg:grid-cols-[minmax(0,1.35fr)_minmax(18rem,0.65fr)]">
+                  <div className="bg-ink">
+                    <video
+                      className="aspect-video h-full w-full object-contain"
+                      controls
+                      preload="metadata"
+                      aria-label={`Interview with ${interview.name}`}
+                    >
+                      <source src={interview.video} type="video/mp4" />
+                      Your browser does not support embedded video.
+                    </video>
                   </div>
-                ))}
-              </div>
-            </article>
+
+                  <div className="p-6 sm:p-8">
+                    <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">
+                      Interview guest
+                    </p>
+                    <h2 className="mt-3 font-display text-3xl font-bold">
+                      {interview.name}
+                    </h2>
+                    <div className="mt-4 space-y-1 text-sm leading-6 text-muted-foreground">
+                      {interview.roles.map((role) => (
+                        <p key={role}>{role}</p>
+                      ))}
+                    </div>
+
+                    <div className="mt-8 border-t pt-6">
+                      <h3 className="font-display text-xl font-bold">
+                        Summary
+                      </h3>
+                      <p className="mt-3 leading-7 text-muted-foreground">
+                        {interview.summary}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </TabsContent>
           ))}
-        </div>
+        </Tabs>
       </section>
     </>
   );
