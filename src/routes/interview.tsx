@@ -152,6 +152,107 @@ const interviews = [
       },
     ],
   },
+  {
+    id: "beekeeping-family",
+    tab: "Beekeeping family",
+    name: "Four-generation beekeeping family",
+    roles: ["Grozasca village, Ungheni District", "Around 200 hives"],
+    video: "/interviews/beekeeping-family.mp4",
+    summary:
+      "A fourth-generation family beekeeping business in Grozasca explains how it produces a range of honeys, propolis, pollen and seed-and-nut mixes from around 200 hives. The producer outlines strict sanitation, packaging and veterinary practices, relying on approved treatments and natural options such as oxalic acid. The interview also describes the severe 2025 season, when cold during acacia and linden flowering, followed by drought, left little harvest and forced the family to keep their limited honey for the bees. They see AgroHelp as a useful tool for weather and crop-spraying alerts, helping beekeepers protect colonies and plan ahead.",
+    captions: [
+      {
+        start: 0,
+        end: 19,
+        text: "Good morning. Please tell us what you do, which bee products you make and where your apiary is located.",
+      },
+      {
+        start: 19,
+        end: 31,
+        text: "We are a family of bee-product producers, engaged in beekeeping for four generations.",
+      },
+      {
+        start: 31,
+        end: 43,
+        text: "The younger generation has developed it into a business. We now have around 200 hives.",
+      },
+      {
+        start: 43,
+        end: 55,
+        text: "We are located in Grozasca village, Ungheni District.",
+      },
+      {
+        start: 55,
+        end: 69,
+        text: "We produce acacia, linden, rapeseed and wildflower honey — and in some years honeydew or lavender honey.",
+      },
+      {
+        start: 69,
+        end: 82,
+        text: "We also extract propolis and pollen, and make seed-and-nut mixes from crops we grow ourselves.",
+      },
+      {
+        start: 82,
+        end: 98,
+        text: "Which sanitary and veterinary rules do you follow to guarantee honey quality and safety?",
+      },
+      {
+        start: 98,
+        end: 112,
+        text: "As food producers, we follow the Republic of Moldova's sanitary-veterinary requirements.",
+      },
+      {
+        start: 112,
+        end: 126,
+        text: "Everything must be disinfected and washed during honey packaging, filling and labelling.",
+      },
+      {
+        start: 126,
+        end: 141,
+        text: "Apiary treatments are carried out with veterinary approval or by trained beekeepers following the requirements.",
+      },
+      {
+        start: 141,
+        end: 154,
+        text: "We mainly use natural products, treating bees with oxalic acid and traditional nettle preparations.",
+      },
+      {
+        start: 154,
+        end: 175,
+        text: "Have extreme weather conditions ever prevented bees from collecting enough nectar, and how did this affect honey volumes?",
+      },
+      {
+        start: 175,
+        end: 188,
+        text: "Yes. In 2025, the climate was completely unfavourable — the worst crisis in about 30 years.",
+      },
+      {
+        start: 188,
+        end: 202,
+        text: "We harvested neither acacia nor linden honey: it was cold, the acacia froze and there were no flowers.",
+      },
+      {
+        start: 202,
+        end: 216,
+        text: "Drought followed, and we kept the very small wildflower harvest for the bees to survive on. There was no profit that year.",
+      },
+      {
+        start: 216,
+        end: 235,
+        text: "How could AgroHelp and QR codes help your farm with planning and confirming artisanal honey quality?",
+      },
+      {
+        start: 235,
+        end: 247,
+        text: "The application is welcome, especially if it sends notifications about unfavourable temperatures.",
+      },
+      {
+        start: 247,
+        end: 256.5,
+        text: "Spraying alerts would also help beekeepers protect colonies from poisoning and take timely action.",
+      },
+    ],
+  },
 ];
 
 function InterviewVideo({
