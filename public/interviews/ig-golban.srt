@@ -1,0 +1,190 @@
+1
+00:00:00,000 --> 00:00:04,500
+Good morning! Tell us, please,
+what exactly do you do?
+
+2
+00:00:04,500 --> 00:00:08,000
+Tell us a bit about your farm:
+what types of oils do you produce?
+
+3
+00:00:08,000 --> 00:00:12,500
+What crops do you grow yourself,
+and where are your fields located?
+
+4
+00:00:13,000 --> 00:00:16,500
+My name is Igor Golban,
+I am the owner of "Biantti" LLC.
+
+5
+00:00:16,500 --> 00:00:22,000
+We have 28 hectares of walnuts,
+almonds, and sea buckthorn.
+
+6
+00:00:22,000 --> 00:00:28,000
+We produce oils, walnuts, seeds,
+vinegars, syrups, jams, and dried fruits.
+
+7
+00:00:28,500 --> 00:00:34,000
+Our range of oils includes
+over 45 types of cold-pressed oils.
+
+8
+00:00:34,000 --> 00:00:41,000
+Starting from pumpkin, flax, hemp,
+milk thistle, walnuts, almonds, hazelnuts.
+
+9
+00:00:41,000 --> 00:00:46,000
+Our range is very large.
+Basically, coconut oil —
+
+10
+00:00:46,000 --> 00:00:52,000
+we have about 10–15 types of oils
+that our competitors do not produce.
+
+11
+00:00:52,000 --> 00:00:58,000
+Camelina oil, rosehip oil,
+amaranth oil, and other types.
+
+12
+00:00:58,000 --> 00:01:03,500
+We are located in
+Băcioi, Străisteni village.
+
+13
+00:01:03,500 --> 00:01:08,000
+That is where our production is,
+where our warehouse and business are.
+
+14
+00:01:10,000 --> 00:01:15,000
+What are the main sanitary rules
+and standards you follow
+
+15
+00:01:15,000 --> 00:01:18,500
+to guarantee the quality
+and safety of your oil?
+
+16
+00:01:19,000 --> 00:01:24,500
+First of all, we buy all certified seeds,
+with invoices and certificates from ANSA.
+
+17
+00:01:24,500 --> 00:01:30,000
+Our production is certified
+and all processes are fully traceable.
+
+18
+00:01:30,000 --> 00:01:36,000
+Starting from reception of raw materials,
+processing, filtration, bottling,
+
+19
+00:01:36,000 --> 00:01:41,000
+labeling, delivery — all in accordance
+with the HACCP standard.
+
+20
+00:01:41,000 --> 00:01:47,000
+We do everything so that the entire
+product is fully monitored
+
+21
+00:01:47,000 --> 00:01:50,500
+and complies with
+current legislation.
+
+22
+00:01:51,500 --> 00:01:56,000
+It is known that in Moldova
+the climate is becoming unpredictable.
+
+23
+00:01:56,000 --> 00:02:01,500
+Severe droughts or hail strongly affect
+the harvest of oilseed crops.
+
+24
+00:02:01,500 --> 00:02:06,500
+Have you had seasons when the harvest
+was poor due to weather conditions?
+
+25
+00:02:06,500 --> 00:02:11,000
+How did this reflect on
+oil production volume and cost?
+
+26
+00:02:11,500 --> 00:02:16,500
+Basically, once every two years
+there is either a drought or some frosts.
+
+27
+00:02:16,500 --> 00:02:22,000
+We try our maximum locally,
+if not, we take products from the region,
+
+28
+00:02:22,000 --> 00:02:26,000
+from Romania, Ukraine, or imports.
+
+29
+00:02:26,000 --> 00:02:31,500
+We cannot fight the drought,
+we just procure the necessary seeds
+
+30
+00:02:31,500 --> 00:02:35,500
+outside of local products
+if what arrived on the local market is available.
+
+31
+00:02:36,500 --> 00:02:41,000
+How useful would the functionality
+of our application and QR code system
+
+32
+00:02:41,000 --> 00:02:45,500
+be for your farm, especially for
+confirming artisanal oil quality
+
+33
+00:02:45,500 --> 00:02:48,500
+and planning raw material purchases?
+
+34
+00:02:49,000 --> 00:02:53,000
+Every year it is harder
+and harder to manage and lead.
+
+35
+00:02:53,000 --> 00:02:58,000
+For this, every year we implement
+practically all technologies
+
+36
+00:02:58,000 --> 00:03:02,500
+that can be implemented
+within the company.
+
+37
+00:03:02,500 --> 00:03:07,500
+We track and strive to automate
+and digitize the processes
+
+38
+00:03:07,500 --> 00:03:10,500
+within the company.
+
+39
+00:03:11,000 --> 00:03:13,000
+Thank you very much!
