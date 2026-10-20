@@ -147,6 +147,14 @@ Keep these destinations synchronized with the README:
 4. test the home page, interviews, mobile navigation and external links;
 5. promote to Production.
 
+## Editing and validation
+
+Start with [src/routes](src/routes) for pages, [src/components/SiteLayout.tsx](src/components/SiteLayout.tsx) for the shared layout, and [public/interviews](public/interviews) for interview media and subtitles.
+
+Run `npm run lint` and `npm run build` after source changes. `npm run preview` serves the built project for local review. Check interview playback and subtitle links as well as the desktop and mobile navigation.
+
+[AGENTS.md](AGENTS.md) describes the Lovable connection: keep published history intact when updating the connected branch.
+
 ---
 
 <div align="center">
